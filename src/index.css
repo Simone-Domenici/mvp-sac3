@@ -1,4 +1,5 @@
 /* reset rules */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,4 +19,20 @@ a {
 ol,
 ul {
   list-style: none;
+}
+
+
+.user{
+  cursor: pointer;
+}
+
+.hide {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.show {
+  transition: max-height 0.8s;
+  max-height: 400px;
 }
