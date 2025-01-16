@@ -1,7 +1,11 @@
-import style from "./Footer.module.css"
+import styles from "./Footer.module.css"
 
 export default function Footer () {
     return (
-        <></>
+        <>
+        <div className={styles.footer}>
+            Questo è un footer
+        </div>
+        </>
     )
 }

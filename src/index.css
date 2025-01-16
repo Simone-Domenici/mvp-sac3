@@ -1,9 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 /* reset rules */
+#root{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Noto Serif', serif;
+}
+
+*::-webkit-scrollbar{
+  display: none;
+}
+
+.logo {
+  height: 100px;
+}
+
+main{
+  flex-grow: 1;
 }
 
 img {
@@ -21,9 +40,17 @@ ul {
   list-style: none;
 }
 
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
 .user{
   cursor: pointer;
+  h3{
+    margin: 0.5rem 0;
+  }
 }
 
 .hide {
@@ -35,4 +62,109 @@ ul {
 .show {
   transition: max-height 0.8s;
   max-height: 400px;
+}
+
+.searchbar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: top;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+
+.searchbar input {
+  line-height: 1.5rem;
+  padding: 0 3px;
+}
+
+.travel-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.travel-form button{
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+.travel-form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+
+}
+
+.travel-form form > * {
+  margin-bottom: 5px;
+}
+
+.card{
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: #ECECEC;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.col{
+  margin-bottom: 1rem;
+}
+
+.col-33 {
+  width: calc((100% / 3) - 1rem);
+}
+
+.col-50{
+  width: calc((100% / 2) - 1rem);
+}
+
+.travel-detail{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.travel-title > *{
+  margin-bottom:10px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.navigate-btn{
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(92, 92, 135);
+  color: white;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.search-travel input{
+   line-height: 1.5rem;
+  padding: 0 3px;
+}
+
+/* UTILITIES */
+
+.d-flex {
+  display: flex;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.mr-2{
+  margin-right: 2rem;
 }
